@@ -2,11 +2,18 @@
 <title>はじめてのVue.js</title>
 <script src="https://unpkg.com/vue@2.5.17"></script>
 
-<div id ="app"></div>
+<div id ="app">
+  <p>
+    {{message}}
+  </p>
+</div>
 
 <script>
-new Vue({
- template: '<p>{{msg}}</p>',
- data: { msg: 'hello world!' }
-}).$mount('#app')
+  console.assert(typeof Vue !== 'undefined');
+  new Vue({
+    el: '#app',
+    data: {
+      message: 'こんにちは！'
+    }
+  });
 </script>
